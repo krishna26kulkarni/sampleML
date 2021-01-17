@@ -17,6 +17,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all the files from the project’s root to the working directory
 COPY src/ /src/
 RUN ls -la /src/*
-
+RUN ls -l /usr/src/mymodel/
 # Running Python Application
-CMD ["python3", "/src/main.py"]
+ENTRYPOINT ["python3", "/src/main.py"]
